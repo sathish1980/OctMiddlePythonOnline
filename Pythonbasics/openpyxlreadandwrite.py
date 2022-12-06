@@ -23,7 +23,7 @@ class openpyxlreadandwrite():
         workbooksheet=outputworkbook.active
         for eachvalue in range(1,len(course)+1):
             #workbooksheet.cell(row=1, column=eachvalue).value=course[eachvalue-1]
-            workbooksheet.cell(row=eachvalue, column=1).value = course[eachvalue - 1]
+            workbooksheet.cell(row=1, column=eachvalue).value = course[eachvalue - 1]
         outputworkbook.save(self.outputfile)
         print("done")
 
@@ -47,5 +47,5 @@ class openpyxlreadandwrite():
         print("done")
 
 obj=openpyxlreadandwrite()
-obj.readwrite()
+obj.excelwrite()
 

@@ -4,13 +4,15 @@ class csvfilereadandwrite():
 
     def csvfileread(self):
         filepath="C:\\Users\\sathishkumar\\PycharmProjects\\OctMiddlePythonOnline\\input\\Testdata.csv"
-        with open(filepath, mode='r') as exfile:
+        with open(filepath, mode='r') as csvreaddata:
             # reading the CSV file
-            csvFile = csv.reader(exfile) #return the list of data
+            csvFile = csv.reader(csvreaddata) #return the list of data
 
             # displaying the contents of the CSV file
             for lines in csvFile:
                 print(lines)
+                for eachcolumvalue in lines:
+                    print(eachcolumvalue)
 
     def csvwrite(self):
         fields = ['Name', 'Branch', 'Year', 'CGPA']
@@ -24,7 +26,7 @@ class csvfilereadandwrite():
                 ['Sahil', 'EP', '2', '9.1']]
 
         # name of csv file
-        filename = "C:\\Users\\sathishkumar\\PycharmProjects\\OctMiddlePythonOnline\\Output\\university_records.csv"
+        filename = "C:\\Users\\sathishkumar\\PycharmProjects\\OctMiddlePythonOnline\\Output\\outputfile.csv"
 
         # writing to csv file
         with open(filename, 'w') as csvfile:
